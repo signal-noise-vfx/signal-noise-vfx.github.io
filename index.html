@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 01">
+<title>Signal / Noise — AI for VFX · Issue 01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d10;--card:#15171c;--line:#262a32;--ink:#eef0f3;--dim:#9aa1ad;--red:#ff3b30;--amber:#ffb020;--cyan:#34d3ee;--violet:#a78bfa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.bars{display:flex;height:8px}.bars i{flex:1}
+.bars i:nth-child(1){background:#fff}.bars i:nth-child(2){background:#ffe600}.bars i:nth-child(3){background:#00e5ff}.bars i:nth-child(4){background:#00e676}.bars i:nth-child(5){background:#ff00c8}.bars i:nth-child(6){background:var(--red)}.bars i:nth-child(7){background:#2962ff}
+header{padding:42px 0 28px;border-bottom:1px solid var(--line)}
+.tag{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;display:flex;gap:14px;flex-wrap:wrap}
+.tag b{color:var(--red)}
+h1{font:700 clamp(44px,9vw,84px)/.92 'Space Grotesk',sans-serif;margin:14px 0 14px;letter-spacing:-.03em}
+h1 span{color:var(--red)}
+.lede{color:var(--dim);font-size:18px;max-width:620px;margin:0}
+.tldr{margin:28px 0 8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:18px 20px}
+.tldr h3{margin:0 0 8px;font:700 13px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--red)}
+.tldr ul{margin:0;padding-left:18px}.tldr li{margin:4px 0}
+h2{font:700 13px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;margin:44px 0 16px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.c1{color:var(--amber)}.c2{color:var(--cyan)}.c3{color:var(--violet)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:12px;display:grid;grid-template-columns:52px 1fr;gap:16px}
+.n{font:700 30px/1 'Space Grotesk';color:#3a3f49}
+.item h4{margin:0 0 6px;font:700 20px/1.25 'Space Grotesk',sans-serif}
+.item p{margin:0 0 8px;color:#cfd3da}
+.why{font-size:14px;color:var(--ink);background:#1d2027;border-radius:8px;padding:8px 12px;margin-top:6px}
+.why b{color:var(--amber);font:600 11px 'JetBrains Mono',monospace;letter-spacing:.1em;margin-right:6px}
+.pill{display:inline-block;font:500 11px 'JetBrains Mono',monospace;padding:3px 8px;border-radius:99px;border:1px solid var(--line);color:var(--dim);margin-right:6px}
+.hot{border-color:var(--red);color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.mini h4{margin:0 0 6px;font:700 17px 'Space Grotesk'}
+.mini p{margin:0;color:#cfd3da;font-size:15px}
+.warn{border-color:#5a3b10;background:#1c160c}
+.src{font-size:13px;color:var(--dim)}.src a{color:var(--cyan);text-decoration:none}
+.src li{margin:3px 0}
+.banner{position:relative;height:150px;margin:-18px -20px 14px;border-radius:12px 12px 0 0;overflow:hidden;background:linear-gradient(120deg,#1d2027,#2a1015)}
+.banner img{width:100%;height:100%;object-fit:cover;display:block}
+.banner .fb{position:absolute;inset:0;display:none;align-items:flex-end;padding:12px 16px;font:700 26px 'Space Grotesk';letter-spacing:-.02em;color:#fff;background:repeating-linear-gradient(90deg,#ffffff08 0 40px,transparent 40px 80px),linear-gradient(120deg,#1d2027,#3a0f14)}
+.banner.off img{display:none}.banner.off .fb{display:flex}
+.banner .cr{position:absolute;right:8px;bottom:6px;font:500 10px 'JetBrains Mono';color:#fff;background:#0009;padding:2px 6px;border-radius:4px}
+.item.has{grid-template-columns:1fr}.item.has .n{display:none}
+.mini .banner{height:110px;margin:-16px -18px 12px}
+nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12px 'JetBrains Mono';letter-spacing:.1em}nav.top a{color:var(--dim);text-decoration:none}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;color:var(--dim)}
+@media(max-width:520px){.item{grid-template-columns:1fr;gap:4px}.n{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+<nav class="top"><a href="/">SIGNAL/NOISE</a><a href="/archive.html">ARCHIVE →</a></nav>
+<header>
+<div class="tag"><span><b>●</b> Issue 01</span><span>Sat 14 Nov 2026</span><span>Covers 2–14 Nov</span></div>
+<h1>Signal<span>/</span>Noise</h1>
+<p class="lede">AI news for VFX, motion and promo people: only what changes your work, explained in a few lines.</p>
+<div class="tldr">
+<h3>TL;DR, 30 SECONDS</h3>
+<ul>
+<li>The After Effects AI Assistant has shipped. It automates repetitive tasks by text prompt and writes expressions.</li>
+<li>Adobe is opening AE to outside AI agents through MCP.</li>
+<li>Seedance 2.5 now renders in 4K on Runway and Pika.</li>
+<li>Google video generation got cheaper and longer, and Flow got an agent.</li>
+</ul>
+</div>
+</header>
+
+<h2 class="c1">On your desk · tools</h2>
+
+<div class="item has"><div class="n">01</div><div><div class="banner"><img src="https://www.adobe.com/products/media_19762a181d8f7cdad7fa491acc9917bdedbcba01a.jpg?width=1200&format=pjpg&optimize=medium" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('off')"><div class="fb">After Effects</div><span class="cr">Image: Adobe</span></div>
+<span class="pill hot">Must try</span><span class="pill">After Effects</span>
+<h4>The After Effects AI Assistant ships in the November release</h4>
+<p>The November 2026 release adds an agentic AI Assistant. You control After Effects with natural-language instructions, and it can automate repetitive work or generate JavaScript expressions. It was in beta since August and won CineD's Best of Show for AI innovation at IBC.</p>
+<p>Adobe also announced at MAX that it will support MCP (Model Context Protocol), so you can connect third-party AI agents directly to After Effects.</p>
+<div class="why"><b>WHY IT MATTERS</b>It targets exactly your team's pain point: versioning, renaming and expressions for promo packages. With MCP, an agent like Claude could drive AE directly.</div>
+</div></div>
+
+<div class="item has"><div class="n">02</div><div><div class="banner"><img src="https://news.adobe.com/news/2026/11/media_1be983d78cf64b14905c05379432c9a51f63f93b1.jpg?width=1200&format=pjpg&optimize=medium" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('off')"><div class="fb">Adobe Firefly</div><span class="cr">Image: Adobe</span></div>
+<span class="pill">Adobe MAX</span><span class="pill">Firefly</span>
+<h4>Adobe repositions Firefly as an "AI creative studio"</h4>
+<p>At MAX (10–12 Nov, Miami Beach), the focus was AI agents everywhere. Firefly now brings Adobe's tools, third-party models and a Creative Agent together in one place. The Firefly Video editor goes from a story idea to a cut, with captions and generated transitions. A new Firefly Design workspace (beta) puts illustration, images, motion, 3D and print on one canvas, with live-linked PSD and AI files.</p>
+<div class="why"><b>WHY IT MATTERS</b>Expect more third-party models (Google and others) inside the apps you already pay for. Fewer separate subscriptions, but more lock-in to Adobe.</div>
+</div></div>
+
+<div class="item has"><div class="n">03</div><div><div class="banner"><img src="https://runway.com/opengraph-image.png?opengraph-image.1oltnwfb7pfkb.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('off')"><div class="fb">Seedance 2.5 · 4K</div><span class="cr">Image: Runway</span></div>
+<span class="pill hot">Video gen</span><span class="pill">Seedance</span>
+<h4>Seedance 2.5 arrives in 4K on Runway and Pika</h4>
+<p>Pika and Runway each announced 4K for ByteDance's Seedance 2.5 on 11 November. The model already supports long, reference-heavy clips: up to 30 seconds, with up to 50 references in a single generation.</p>
+<div class="why"><b>WHY IT MATTERS</b>4K output from a top-ranked model moves AI plates and inserts closer to on-air quality. You'll still need to fix temporal flicker in comp.</div>
+</div></div>
+
+<div class="item has"><div class="n">04</div><div><div class="banner"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GoogleFlow-Image.width-1300.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('off')"><div class="fb">Google Flow</div><span class="cr">Image: Google</span></div>
+<span class="pill">Google</span><span class="pill">Flow</span>
+<h4>Google Flow gets an agent, and Gemini video gets cheaper</h4>
+<p>Gemini Omni 1.2 Flash is now generally available. It makes 15-second clips and costs 30% less than the previous version, at $0.07 per second for 720p. Flow added a Flow Agent for planning and editing projects, custom workflows built with natural language, and mobile apps starting on Android.</p>
+<div class="why"><b>WHY IT MATTERS</b>Prices are falling fast, so cheap rough animatics and mood clips for pitches are realistic now.</div>
+</div></div>
+
+<div class="item has"><div class="n">05</div><div><div class="banner off"><div class="fb">OpenAI · Images 2.6</div></div>
+<span class="pill">OpenAI</span><span class="pill">Image</span>
+<h4>ChatGPT Images 2.6: twice as fast, and it makes GIFs</h4>
+<p>OpenAI's new image model is 50% faster and can now create animated GIFs.</p>
+<div class="why"><b>WHY IT MATTERS</b>It's minor for broadcast, but useful for quick social teasers and internal pitch decks.</div>
+</div></div>
+
+<div class="grid">
+<div class="mini"><div class="banner"><img src="https://www.bloomway.ai/og-default-1200x630.png" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('off')"><div class="fb">Bloomway</div><span class="cr">Image: Bloomway</span></div><h4>👀 Worth watching: 3D previs → AI video</h4><p>Bloomway's new 3D Director Studio lets you build an environment, block characters and set camera moves with text. The animated previs then guides the AI video generation. This is the direction "directable" AI video is going.</p></div>
+<div class="mini warn"><h4>⚠️ Heads-up: model retired</h4><p>BytePlus shut down Seedance 1.5 Pro on 11 November with no automatic migration. If any pipeline or API script uses it, it's broken now.</p></div>
+</div>
+
+<h2 class="c3">Big picture · models & research</h2>
+<div class="grid">
+<div class="mini"><div class="banner"><img src="https://assets.claude.com/6d4a0d28992ade92d6fa63646fd9c9d318245c6c.jpg" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('off')"><div class="fb">Anthropic</div><span class="cr">Image: Anthropic</span></div><h4>Claude Fable 5.2 & Mythos 5.2</h4><p>Anthropic, 9 Nov. They share one base model: Fable is for all users and Mythos for verified organizations. Up to 30% faster than the previous generation.</p></div>
+<div class="mini"><div class="banner off"><div class="fb">Gemini 4</div></div><h4>Gemini 4 Carbon & Hydrogen</h4><p>Google released Gemini 4 Carbon to general availability on 10 Nov, followed by Gemini 4 Hydrogen on 12 Nov.</p></div>
+<div class="mini"><div class="banner off"><div class="fb">JEPA · world models</div></div><h4>JEPA corner: H-JEPA</h4><p>Introduced in October, H-JEPA learns at several levels of abstraction at once, so one world model can handle both immediate control and long-term planning. LeCun's AMI Labs, backed by a $1.03B seed round, is betting on this line of work.</p></div>
+</div>
+
+<h2>Sources</h2>
+<ul class="src">
+<li><a href="https://www.cgchannel.com/2026/11/adobe-releases-after-effects-27-0/">CG Channel: Adobe releases After Effects (Nov 2026)</a></li>
+<li><a href="https://www.digitalcameraworld.com/tech/software/adobe-after-effects-is-getting-an-ai-assistant-that-can-write-animation-code-for-you-and-it-could-change-the-game">Digital Camera World: AE AI Assistant & MCP</a></li>
+<li><a href="https://www.cined.com/?p=441813">CineD: AE AI Assistant public beta / IBC award</a></li>
+<li><a href="https://news.adobe.com/news/2026/11/adobe-firefly-expands">Adobe: Firefly expands as the AI creative studio</a></li>
+<li><a href="https://www.ibtimes.com.au/adobe-expands-firefly-ai-video-editing-creative-agent-models-1878428">IBTimes: Firefly at MAX 2026</a></li>
+<li><a href="https://www.constellationr.com/insights/news/adobe-aims-its-platform-ai-agents-creative-workflows-over-assets">Constellation Research: MAX 2026 themes</a></li>
+<li><a href="https://digg.com/ai/9xw3vsww">Seedance 2.5 4K on Runway & Pika</a></li>
+<li><a href="https://futurefive.com.au/story/google-adds-ai-agents-and-mobile-apps-to-creative-flow-tools">FutureFive: Google Flow agents & apps</a></li>
+<li><a href="https://note.com/masahiko_studio/n/nfa419e0636e4?hl=en">Weekly recap: Gemini Omni 1.2 Flash, Images 2.6</a></li>
+<li><a href="https://manilatimes.net/2026/11/13/tmt-newswire/globenewswire/bloomway-ai-introduces-3d-director-studio-build-worlds-and-direct-ai-films-with-natural-language/2469362">Bloomway 3D Director Studio (press release)</a></li>
+<li><a href="https://csuite.so/blog/ai-models-roundup-november-2026">CSuite: Nov 2026 model roundup (Seedance 1.5 Pro shutdown)</a></li>
+<li><a href="https://note.com/shinya_latte/n/nb9aeb8772621?hl=en">AI News Weekly: Claude Fable 5.2, Gemini 4</a></li>
+<li><a href="https://pub.towardsai.net/jepa-and-world-models-from-prediction-to-physical-intelligence-6789d58b2b90">Towards AI: JEPA & world models (H-JEPA)</a></li>
+</ul>
+
+<footer>SIGNAL/NOISE · curated by Claude for a VFX/promo team · <a href="/archive.html" style="color:inherit">all issues</a></footer>
+</div>
+</body>
+</html>
