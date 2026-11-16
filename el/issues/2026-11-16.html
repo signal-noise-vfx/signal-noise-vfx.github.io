@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 02">
+<title>Signal / Noise — AI for VFX · Issue 02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d10;--card:#15171c;--line:#262a32;--ink:#eef0f3;--dim:#9aa1ad;--red:#ff3b30;--amber:#ffb020;--cyan:#34d3ee;--violet:#a78bfa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.bars{display:flex;height:8px}.bars i{flex:1}
+.bars i:nth-child(1){background:#fff}.bars i:nth-child(2){background:#ffe600}.bars i:nth-child(3){background:#00e5ff}.bars i:nth-child(4){background:#00e676}.bars i:nth-child(5){background:#ff00c8}.bars i:nth-child(6){background:var(--red)}.bars i:nth-child(7){background:#2962ff}
+header{padding:42px 0 28px;border-bottom:1px solid var(--line)}
+.tag{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;display:flex;gap:14px;flex-wrap:wrap}
+.tag b{color:var(--red)}
+h1{font:700 clamp(44px,9vw,84px)/.92 'Space Grotesk',sans-serif;margin:14px 0 14px;letter-spacing:-.03em}
+h1 span{color:var(--red)}
+.lede{color:var(--dim);font-size:18px;max-width:620px;margin:0}
+.tldr{margin:28px 0 8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:18px 20px}
+.tldr h3{margin:0 0 8px;font:700 13px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--red)}
+.tldr ul{margin:0;padding-left:18px}.tldr li{margin:4px 0}
+h2{font:700 13px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;margin:44px 0 16px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.c1{color:var(--amber)}.c2{color:var(--cyan)}.c3{color:var(--violet)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:36px;display:grid;grid-template-columns:52px 1fr;gap:16px}
+.n{font:700 30px/1 'Space Grotesk';color:#3a3f49}
+.item h4{margin:0 0 6px;font:700 20px/1.25 'Space Grotesk',sans-serif}
+.item p{margin:0 0 8px;color:#cfd3da}
+.why{font-size:14px;color:var(--ink);background:#1d2027;border-radius:8px;padding:8px 12px;margin-top:6px}
+.why b{color:var(--amber);font:600 11px 'JetBrains Mono',monospace;letter-spacing:.1em;margin-right:6px}
+.pill{display:inline-block;font:500 11px 'JetBrains Mono',monospace;padding:3px 8px;border-radius:99px;border:1px solid var(--line);color:var(--dim);margin-right:6px}
+.hot{border-color:var(--red);color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.mini h4{margin:0 0 6px;font:700 17px 'Space Grotesk'}
+.mini p{margin:0;color:#cfd3da;font-size:15px}
+.warn{border-color:#5a3b10;background:#1c160c}
+.src{font-size:13px;color:var(--dim)}.src a{color:var(--cyan);text-decoration:none}
+.src li{margin:3px 0}
+.banner{position:relative;height:230px;margin:-18px -20px 14px;border-radius:12px 12px 0 0;overflow:hidden;background:linear-gradient(120deg,#1d2027,#2a1015)}
+.banner img{width:100%;height:100%;object-fit:cover;display:none}.banner.ok img{display:block}.banner .art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.banner .fb{position:absolute;inset:0;display:none;align-items:flex-end;padding:14px 18px;font:700 30px 'Space Grotesk';letter-spacing:-.02em;color:#fff;text-shadow:0 2px 18px #000}.banner.gen .fb{display:flex}
+
+.banner .cr:empty{display:none}.banner .cr{position:absolute;right:8px;bottom:6px;font:500 10px 'JetBrains Mono';color:#fff;background:#0009;padding:2px 6px;border-radius:4px}
+.item.has{grid-template-columns:1fr}.item.has .n{display:none}
+.mini .banner{height:120px;margin:-16px -18px 12px}
+nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12px 'JetBrains Mono';letter-spacing:.1em}nav.top a{color:var(--dim);text-decoration:none}
+.lg{color:var(--dim);text-decoration:none;padding:2px 4px}.lg.on{color:#fff;border-bottom:2px solid var(--red)}footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;color:var(--dim)}
+@media(max-width:520px){.item{grid-template-columns:1fr;gap:4px}.n{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+<nav class="top"><a href="/el/">SIGNAL/NOISE</a><a href="/el/archive.html">ΑΡΧΕΙΟ →</a><span><a href="/issues/2026-11-16.html" class="lg">EN</a> · <a href="/el/issues/2026-11-16.html" class="lg on">ΕΛ</a></span></nav>
+<header>
+<div class="tag"><span><b>●</b> Τεύχος 02</span><span>Δευ 16 Νοε 2026</span><span>Καλύπτει 12–16 Νοε</span></div>
+<h1>Signal<span>/</span>Noise</h1>
+<p class="lede">Νέα AI για όσους δουλεύουν σε VFX, motion και promo: μόνο ό,τι αλλάζει τη δουλειά σου, σε λίγες γραμμές.</p>
+<div class="tldr">
+<h3>ΜΕ ΜΙΑ ΜΑΤΙΑ, 30 ΔΕΥΤΕΡΟΛΕΠΤΑ</h3>
+<ul>
+<li>Ήσυχο Σαββατοκύριακο μετά το MAX: καμία μεγάλη κυκλοφορία από το Σάββατο, οπότε αυτό είναι ένα σύντομο τεύχος για ό,τι μας ξέφυγε.</li>
+<li>Η MiniMax κυκλοφόρησε το H3-Image με ανοιχτά weights: εγγενείς εικόνες 4K σε περίπου 10–16 δευτερόλεπτα, με περιοριστική άδεια.</li>
+<li>Το Pika έβγαλε το H3 Flex, ένα open-weights μοντέλο text-to-video, και η OpenAI χώρισε το Images 2.6 σε γρήγορο και ποιοτικό μοντέλο στο API.</li>
+<li>Έρευνα: το JEPA-Anything εκπαιδεύει ένα μοντέλο κόσμου σε επτά πολύ διαφορετικά πεδία.</li>
+</ul>
+</div>
+</header>
+<h2 class="c1">Στο γραφείο σου · εργαλεία</h2>
+<div class="item has"><div class="n">01</div><div><div class="banner" data-label="MiniMax H3-Image" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">MiniMax H3-Image</div><span class="cr"></span></div>
+<span class="pill">Open weights</span><span class="pill">Εικόνα</span>
+<h4>Η MiniMax ανοίγει το H3-Image: εγγενές 4K, αλλά διάβασε την άδεια</h4>
+<p>Η MiniMax δημοσίευσε τα weights του H3-Image (11 Νοε), του «αδερφού» για ακίνητη εικόνα του video μοντέλου H3. Είναι ένα diffusion μοντέλο 33 δισ. παραμέτρων που βγάζει εγγενώς περίπου 16 MP, και σε φαρδιά κάδρα 21:9, σε περίπου 10–16 δευτερόλεπτα μέσω API. Υπάρχουν οδηγίες εγκατάστασης για ComfyUI και diffusers.</p>
+<p>Το πρόβλημα είναι η άδεια: οι μεγαλύτερες εταιρείες και όποιος εξυπηρετεί τρίτους χρειάζονται γραπτή άδεια, και η άδεια εξαιρεί ρητά ΕΕ, Ηνωμένο Βασίλειο, ΗΠΑ και Νότια Κορέα.</p>
+<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Εγγενές 4K και 21:9 απευθείας από το μοντέλο σημαίνει λιγότερα upscale για backplates και key art. Όμως ως ευρωπαϊκός broadcaster δεν μπορείς να χρησιμοποιήσεις εμπορικά τα ανοιχτά weights χωρίς συμφωνία, οπότε δες το ως εργαλείο δοκιμών, όχι παραγωγής.</div>
+</div></div>
+
+<div class="item has"><div class="n">02</div><div><div class="banner" data-label="Pika H3 Flex" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Pika H3 Flex</div><span class="cr"></span></div>
+<span class="pill">Open weights</span><span class="pill">Video gen</span>
+<h4>Το Pika κυκλοφορεί το H3 Flex ως open-weights μοντέλο βίντεο</h4>
+<p>Το Pika κυκλοφόρησε το H3 Flex με ανοιχτά weights. Στο DesignArena είναι αυτή τη στιγμή πρώτο στην κατάταξη για open-weights text-to-video μοντέλα.</p>
+<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Τα ανοιχτά μοντέλα βίντεο τρέχουν στις δικές σας GPU, οπότε το υλικό και τα briefs δεν φεύγουν ποτέ από το κτίριο. Αυτό μετράει για promo υλικό υπό embargo. Έλεγξε τους όρους της άδειας πριν από οποιαδήποτε on-air χρήση.</div>
+</div></div>
+
+<div class="item has"><div class="n">03</div><div><div class="banner" data-label="OpenAI · Images 2.6 API" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI · Images 2.6 API</div><span class="cr"></span></div>
+<span class="pill">OpenAI</span><span class="pill">Εικόνα</span>
+<h4>Το Images 2.6 φτάνει στο API ως δύο μοντέλα: Flare και Sunburst</h4>
+<p>Μετά την ενημέρωση του ChatGPT που είδαμε στο προηγούμενο τεύχος, το API προσφέρει πλέον δύο μοντέλα εικόνας: το Flare για ταχύτητα και το Sunburst για ποιότητα. Το ChatGPT απέκτησε επίσης εξαγωγή SVG δίπλα στα GIF.</p>
+<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Η εξαγωγή SVG είναι το χρήσιμο κομμάτι για σένα: πρόχειρα logo marks και εικονίδια που μπαίνουν κατευθείαν στο Illustrator ή στο AE ως shape layers, αντί για raster που πρέπει να κάνεις trace.</div>
+</div></div>
+
+<div class="grid">
+<div class="mini warn"><h4>⚠️ Προσοχή: σταδιακή διάθεση του Kling 4.0</h4><p>Το Kling 4.0 (κλιπ 30 δευτερολέπτων, έλεγχος με 10 keyframes, 4K 10-bit HDR στην πλήρη έκδοση) κυκλοφόρησε σταδιακά, πρώτα η έκδοση Flash στα 720p. Αν το δοκίμασες νωρίς, μάλλον είδες το Flash και όχι την τελική ποιότητα.</p></div>
+</div>
+
+<h2 class="c3">Η μεγάλη εικόνα · μοντέλα & έρευνα</h2>
+<div class="grid">
+<div class="mini"><div class="banner" data-label="Meta Muse" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Meta Muse</div><span class="cr"></span></div><h4>Meta Muse Ember</h4><p>Η Meta κυκλοφόρησε στις 12 Νοε το Muse Ember, το μικρότερο μοντέλο της οικογένειας Muse, με κλειστά weights.</p></div>
+<div class="mini"><div class="banner" data-label="JEPA · world models" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">JEPA · world models</div><span class="cr"></span></div><h4>Γωνιά JEPA: JEPA-Anything</h4><p>Μια ακαδημαϊκή ομάδα (NUS, Shanghai Jiao Tong, Εδιμβούργο κ.ά.) εκπαίδευσε ένα μοντέλο κόσμου τύπου JEPA σε επτά πεδία, από όραση και έλεγχο μέχρι καιρό και μόρια. Ξεπέρασε τα JEPA baselines και στις δέκα αντίστοιχες δοκιμές και χωρίζει τη δυναμική σε κατανοητούς παράγοντες.</p></div>
+<div class="mini"><div class="banner" data-label="Open weights" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Open weights</div><span class="cr"></span></div><h4>Τάση: τα ανοιχτά μοντέλα πλησιάζουν</h4><p>Μέσα σε ένα δεκαπενθήμερο, η MiniMax (εικόνα) και το Pika (βίντεο) έβγαλαν ανταγωνιστικά open-weights μοντέλα. Οι κλειστές υπηρεσίες προηγούνται ακόμα, αλλά η απόσταση για generation σε δικό σου hardware μικραίνει, ενώ οι άδειες γίνονται αυστηρότερες.</p></div>
+</div>
+
+<h2>Πηγές</h2>
+<ul class="src">
+<li><a href="https://neurohive.io/en/news/minimax-h3-image-4k-image-generation/">Neurohive: MiniMax H3-Image, open-weight native 4K images</a></li>
+<li><a href="https://aiweekly.co/alerts/minimax-open-sources-h3-image-331b-parameter-diffusion-model">AI Weekly: MiniMax open-sources H3-Image</a></li>
+<li><a href="https://thursdai.news/releases/2026-11">ThursdAI: Everything AI released in November 2026 (Pika H3 Flex, Images 2.6 API, Muse Ember)</a></li>
+<li><a href="https://lumalabs.ai/news/kling-4.0-vs-seedance-2.5">Luma: Kling 4.0 vs Seedance 2.5</a></li>
+<li><a href="https://aiweekly.co/editors-blog/found-first-jepa-anything-learns-one-world-model-across-7-domains-ai-nominated">AI Weekly: JEPA-Anything, one world model across 7 domains</a></li>
+<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026</a></li>
+</ul>
+
+<footer>SIGNAL/NOISE · επιμέλεια: Claude για ομάδα VFX/promo · <a href="/el/archive.html" style="color:inherit">όλα τα τεύχη</a></footer>
+</div>
+<script src="/assets/sn.js"></script>
+</body>
+</html>

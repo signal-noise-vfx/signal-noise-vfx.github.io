@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 01">
-<title>Signal / Noise — AI for VFX · Issue 01</title>
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 02">
+<title>Signal / Noise — AI for VFX · Issue 02</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -58,85 +58,61 @@ nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12p
 <div class="wrap">
 <nav class="top"><a href="/">SIGNAL/NOISE</a><a href="/archive.html">ARCHIVE →</a><span><a href="/" class="lg on">EN</a> · <a href="/el/" class="lg">ΕΛ</a></span></nav>
 <header>
-<div class="tag"><span><b>●</b> Issue 01</span><span>Sat 14 Nov 2026</span><span>Covers 2–14 Nov</span></div>
+<div class="tag"><span><b>●</b> Issue 02</span><span>Mon 16 Nov 2026</span><span>Covers 12–16 Nov</span></div>
 <h1>Signal<span>/</span>Noise</h1>
 <p class="lede">AI news for VFX, motion and promo people: only what changes your work, explained in a few lines.</p>
 <div class="tldr">
 <h3>TL;DR, 30 SECONDS</h3>
 <ul>
-<li>The After Effects AI Assistant has shipped. It automates repetitive tasks by text prompt and writes expressions.</li>
-<li>Adobe is opening AE to outside AI agents through MCP.</li>
-<li>Seedance 2.5 now renders in 4K on Runway and Pika.</li>
-<li>Google video generation got cheaper and longer, and Flow got an agent.</li>
+<li>A quiet post-MAX weekend: no major launches since Saturday, so this is a short catch-up issue.</li>
+<li>MiniMax released H3-Image as open weights: native 4K stills in about 10–16 seconds, with a restrictive licence.</li>
+<li>Pika put out H3 Flex, an open-weights text-to-video model, and OpenAI split Images 2.6 into fast and quality API models.</li>
+<li>Research: JEPA-Anything trains one world model across seven very different domains.</li>
 </ul>
 </div>
 </header>
-
 <h2 class="c1">On your desk · tools</h2>
-
-<div class="item has"><div class="n">01</div><div><div class="banner" data-label="After Effects" data-src="https://www.adobe.com/products/media_1fc699585c6a1217a142c92d29f27be722fef5bcf.jpg?width=2000&format=jpg&optimize=medium|https://www.adobe.com/products/media_19762a181d8f7cdad7fa491acc9917bdedbcba01a.jpg?width=1200&format=pjpg&optimize=medium" data-credit="Adobe"><img alt="" referrerpolicy="no-referrer"><div class="fb">After Effects</div><span class="cr"></span></div>
-<span class="pill hot">Must try</span><span class="pill">After Effects</span>
-<h4>The After Effects AI Assistant ships in the November release</h4>
-<p>The November 2026 release adds an agentic AI Assistant. You control After Effects with natural-language instructions, and it can automate repetitive work or generate JavaScript expressions. It was in beta since August and won CineD's Best of Show for AI innovation at IBC.</p>
-<p>Adobe also announced at MAX that it will support MCP (Model Context Protocol), so you can connect third-party AI agents directly to After Effects.</p>
-<div class="why"><b>WHY IT MATTERS</b>It targets exactly your team's pain point: versioning, renaming and expressions for promo packages. With MCP, an agent like Claude could drive AE directly.</div>
+<div class="item has"><div class="n">01</div><div><div class="banner" data-label="MiniMax H3-Image" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">MiniMax H3-Image</div><span class="cr"></span></div>
+<span class="pill">Open weights</span><span class="pill">Image</span>
+<h4>MiniMax opens up H3-Image: native 4K stills, but read the licence</h4>
+<p>MiniMax published the weights of H3-Image (11 Nov), the stills sibling of its H3 video model. It is a 33-billion-parameter diffusion model that outputs around 16 MP natively, including wide 21:9 frames, in roughly 10–16 seconds through the API. Setup notes cover ComfyUI and diffusers.</p>
+<p>The catch is the licence: larger companies and anyone serving third parties need written permission, and the licence explicitly excludes the EU, UK, US and South Korea.</p>
+<div class="why"><b>WHY IT MATTERS</b>Native 4K and 21:9 straight out of the model means fewer upscale passes for backplates and key art. But as an EU broadcaster you cannot use the open weights commercially without a deal, so treat it as a test bench, not a production tool.</div>
 </div></div>
 
-<div class="item has"><div class="n">02</div><div><div class="banner" data-label="Adobe Firefly" data-src="https://www.adobe.com/products/media_14ad8aa993afdca5243c5bd087dda79fee1cbb53c.png?width=2000&format=jpg&optimize=medium|https://news.adobe.com/news/2026/11/media_1be983d78cf64b14905c05379432c9a51f63f93b1.jpg?width=1200&format=pjpg&optimize=medium" data-credit="Adobe"><img alt="" referrerpolicy="no-referrer"><div class="fb">Adobe Firefly</div><span class="cr"></span></div>
-<span class="pill">Adobe MAX</span><span class="pill">Firefly</span>
-<h4>Adobe repositions Firefly as an "AI creative studio"</h4>
-<p>At MAX (10–12 Nov, Miami Beach), the focus was AI agents everywhere. Firefly now brings Adobe's tools, third-party models and a Creative Agent together in one place. The Firefly Video editor goes from a story idea to a cut, with captions and generated transitions. A new Firefly Design workspace (beta) puts illustration, images, motion, 3D and print on one canvas, with live-linked PSD and AI files.</p>
-<div class="why"><b>WHY IT MATTERS</b>Expect more third-party models (Google and others) inside the apps you already pay for. Fewer separate subscriptions, but more lock-in to Adobe.</div>
+<div class="item has"><div class="n">02</div><div><div class="banner" data-label="Pika H3 Flex" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Pika H3 Flex</div><span class="cr"></span></div>
+<span class="pill">Open weights</span><span class="pill">Video gen</span>
+<h4>Pika releases H3 Flex as an open-weights video model</h4>
+<p>Pika released H3 Flex with open weights. On DesignArena it currently tops the board for open-weights text-to-video models.</p>
+<div class="why"><b>WHY IT MATTERS</b>Open video models can run on your own GPUs, so footage and briefs never leave the building. That matters for embargoed promo material. Check the licence terms before any on-air use.</div>
 </div></div>
 
-<div class="item has"><div class="n">03</div><div><div class="banner" data-label="Seedance 2.5 · 4K" data-src="https://runway.com/opengraph-image.png?opengraph-image.1oltnwfb7pfkb.png" data-credit="Runway"><img alt="" referrerpolicy="no-referrer"><div class="fb">Seedance 2.5 · 4K</div><span class="cr"></span></div>
-<span class="pill hot">Video gen</span><span class="pill">Seedance</span>
-<h4>Seedance 2.5 arrives in 4K on Runway and Pika</h4>
-<p>Pika and Runway each announced 4K for ByteDance's Seedance 2.5 on 11 November. The model already supports long, reference-heavy clips: up to 30 seconds, with up to 50 references in a single generation.</p>
-<div class="why"><b>WHY IT MATTERS</b>4K output from a top-ranked model moves AI plates and inserts closer to on-air quality. You'll still need to fix temporal flicker in comp.</div>
-</div></div>
-
-<div class="item has"><div class="n">04</div><div><div class="banner" data-label="Google Flow" data-src="https://lh3.googleusercontent.com/ZiwH_wa1LfkkOwklJ874qQBiNdhxukLDOasXDAOIvj_myLyX8RgewbtrCiB-GYYeGHwV54tZ8M8CY3bBmqZ3qikQliW7hpIfotfdgiQXSUOgR79s8VE=w1440-h810-n-nu|https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GoogleFlow-Image.width-1300.jpg" data-credit="Google DeepMind (Veo)|Google"><img alt="" referrerpolicy="no-referrer"><div class="fb">Google Flow</div><span class="cr"></span></div>
-<span class="pill">Google</span><span class="pill">Flow</span>
-<h4>Google Flow gets an agent, and Gemini video gets cheaper</h4>
-<p>Gemini Omni 1.2 Flash is now generally available. It makes 15-second clips and costs 30% less than the previous version, at $0.07 per second for 720p. Flow added a Flow Agent for planning and editing projects, custom workflows built with natural language, and mobile apps starting on Android.</p>
-<div class="why"><b>WHY IT MATTERS</b>Prices are falling fast, so cheap rough animatics and mood clips for pitches are realistic now.</div>
-</div></div>
-
-<div class="item has"><div class="n">05</div><div><div class="banner" data-label="OpenAI · Images 2.6" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI · Images 2.6</div><span class="cr"></span></div>
+<div class="item has"><div class="n">03</div><div><div class="banner" data-label="OpenAI · Images 2.6 API" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI · Images 2.6 API</div><span class="cr"></span></div>
 <span class="pill">OpenAI</span><span class="pill">Image</span>
-<h4>ChatGPT Images 2.6: twice as fast, and it makes GIFs</h4>
-<p>OpenAI's new image model is 50% faster and can now create animated GIFs.</p>
-<div class="why"><b>WHY IT MATTERS</b>It's minor for broadcast, but useful for quick social teasers and internal pitch decks.</div>
+<h4>Images 2.6 reaches the API as two models: Flare and Sunburst</h4>
+<p>Following last issue’s ChatGPT update, the API now offers two image models: Flare for speed and Sunburst for quality. ChatGPT also gained SVG export alongside GIF output.</p>
+<div class="why"><b>WHY IT MATTERS</b>SVG export is the useful part for you: rough logo marks and icons that go straight into Illustrator or AE as shape layers, instead of raster you have to trace.</div>
 </div></div>
 
 <div class="grid">
-<div class="mini"><div class="banner" data-label="Bloomway" data-src="https://www.bloomway.ai/og-default-1200x630.png" data-credit="Bloomway"><img alt="" referrerpolicy="no-referrer"><div class="fb">Bloomway</div><span class="cr"></span></div><h4>👀 Worth watching: 3D previs → AI video</h4><p>Bloomway's new 3D Director Studio lets you build an environment, block characters and set camera moves with text. The animated previs then guides the AI video generation. This is the direction "directable" AI video is going.</p></div>
-<div class="mini warn"><h4>⚠️ Heads-up: model retired</h4><p>BytePlus shut down Seedance 1.5 Pro on 11 November with no automatic migration. If any pipeline or API script uses it, it's broken now.</p></div>
+<div class="mini warn"><h4>⚠️ Heads-up: Kling 4.0 rollout</h4><p>Kling 4.0 (30-second clips, 10-keyframe control, 4K 10-bit HDR in the full version) rolled out in stages, with Flash at 720p first. If you tested it early, you probably saw the Flash tier, not the final quality.</p></div>
 </div>
 
 <h2 class="c3">Big picture · models & research</h2>
 <div class="grid">
-<div class="mini"><div class="banner" data-label="Anthropic" data-src="https://assets.claude.com/6d4a0d28992ade92d6fa63646fd9c9d318245c6c.jpg" data-credit="Anthropic"><img alt="" referrerpolicy="no-referrer"><div class="fb">Anthropic</div><span class="cr"></span></div><h4>Claude Fable 5.2 & Mythos 5.2</h4><p>Anthropic, 9 Nov. They share one base model: Fable is for all users and Mythos for verified organizations. Up to 30% faster than the previous generation.</p></div>
-<div class="mini"><div class="banner" data-label="Gemini 4" data-src="https://lh3.googleusercontent.com/mIY1prcEmuW-VvXFj1VkQMVjz8YgeAFIeTstI5pgsWxxNFy0iSGhPV8z2jw5oE-r6czEKoTc7T2F1SiIb5mOo4L-hZjaOpv0I9pSF-fKl3RBye1a=w1440-h810-n-nu" data-credit="Google DeepMind"><img alt="" referrerpolicy="no-referrer"><div class="fb">Gemini 4</div><span class="cr"></span></div><h4>Gemini 4 Carbon & Hydrogen</h4><p>Google released Gemini 4 Carbon to general availability on 10 Nov, followed by Gemini 4 Hydrogen on 12 Nov.</p></div>
-<div class="mini"><div class="banner" data-label="JEPA · world models" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">JEPA · world models</div><span class="cr"></span></div><h4>JEPA corner: H-JEPA</h4><p>Introduced in October, H-JEPA learns at several levels of abstraction at once, so one world model can handle both immediate control and long-term planning. LeCun's AMI Labs, backed by a $1.03B seed round, is betting on this line of work.</p></div>
+<div class="mini"><div class="banner" data-label="Meta Muse" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Meta Muse</div><span class="cr"></span></div><h4>Meta Muse Ember</h4><p>Meta released Muse Ember on 12 Nov, the smallest model in its Muse family, with closed weights.</p></div>
+<div class="mini"><div class="banner" data-label="JEPA · world models" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">JEPA · world models</div><span class="cr"></span></div><h4>JEPA corner: JEPA-Anything</h4><p>An academic team (NUS, Shanghai Jiao Tong, Edinburgh and others) trained one JEPA-style world model across seven domains, from vision and control to weather and molecules. It beat JEPA baselines on all ten matched tasks and splits dynamics into readable factors.</p></div>
+<div class="mini"><div class="banner" data-label="Open weights" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Open weights</div><span class="cr"></span></div><h4>Trend: open models catch up</h4><p>In one fortnight, MiniMax (image) and Pika (video) both released competitive open-weights models. Closed services still lead, but the gap for self-hosted generation is shrinking, while licences are getting tighter.</p></div>
 </div>
 
 <h2>Sources</h2>
 <ul class="src">
-<li><a href="https://www.cgchannel.com/2026/11/adobe-releases-after-effects-27-0/">CG Channel: Adobe releases After Effects (Nov 2026)</a></li>
-<li><a href="https://www.digitalcameraworld.com/tech/software/adobe-after-effects-is-getting-an-ai-assistant-that-can-write-animation-code-for-you-and-it-could-change-the-game">Digital Camera World: AE AI Assistant & MCP</a></li>
-<li><a href="https://www.cined.com/?p=441813">CineD: AE AI Assistant public beta / IBC award</a></li>
-<li><a href="https://news.adobe.com/news/2026/11/adobe-firefly-expands">Adobe: Firefly expands as the AI creative studio</a></li>
-<li><a href="https://www.ibtimes.com.au/adobe-expands-firefly-ai-video-editing-creative-agent-models-1878428">IBTimes: Firefly at MAX 2026</a></li>
-<li><a href="https://www.constellationr.com/insights/news/adobe-aims-its-platform-ai-agents-creative-workflows-over-assets">Constellation Research: MAX 2026 themes</a></li>
-<li><a href="https://digg.com/ai/9xw3vsww">Seedance 2.5 4K on Runway & Pika</a></li>
-<li><a href="https://futurefive.com.au/story/google-adds-ai-agents-and-mobile-apps-to-creative-flow-tools">FutureFive: Google Flow agents & apps</a></li>
-<li><a href="https://note.com/masahiko_studio/n/nfa419e0636e4?hl=en">Weekly recap: Gemini Omni 1.2 Flash, Images 2.6</a></li>
-<li><a href="https://manilatimes.net/2026/11/13/tmt-newswire/globenewswire/bloomway-ai-introduces-3d-director-studio-build-worlds-and-direct-ai-films-with-natural-language/2469362">Bloomway 3D Director Studio (press release)</a></li>
-<li><a href="https://csuite.so/blog/ai-models-roundup-november-2026">CSuite: Nov 2026 model roundup (Seedance 1.5 Pro shutdown)</a></li>
-<li><a href="https://note.com/shinya_latte/n/nb9aeb8772621?hl=en">AI News Weekly: Claude Fable 5.2, Gemini 4</a></li>
-<li><a href="https://pub.towardsai.net/jepa-and-world-models-from-prediction-to-physical-intelligence-6789d58b2b90">Towards AI: JEPA & world models (H-JEPA)</a></li>
+<li><a href="https://neurohive.io/en/news/minimax-h3-image-4k-image-generation/">Neurohive: MiniMax H3-Image, open-weight native 4K images</a></li>
+<li><a href="https://aiweekly.co/alerts/minimax-open-sources-h3-image-331b-parameter-diffusion-model">AI Weekly: MiniMax open-sources H3-Image</a></li>
+<li><a href="https://thursdai.news/releases/2026-11">ThursdAI: Everything AI released in November 2026 (Pika H3 Flex, Images 2.6 API, Muse Ember)</a></li>
+<li><a href="https://lumalabs.ai/news/kling-4.0-vs-seedance-2.5">Luma: Kling 4.0 vs Seedance 2.5</a></li>
+<li><a href="https://aiweekly.co/editors-blog/found-first-jepa-anything-learns-one-world-model-across-7-domains-ai-nominated">AI Weekly: JEPA-Anything, one world model across 7 domains</a></li>
+<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026</a></li>
 </ul>
 
 <footer>SIGNAL/NOISE · curated by Claude for a VFX/promo team · <a href="/archive.html" style="color:inherit">all issues</a></footer>
