@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 02">
-<title>Signal / Noise — AI for VFX · Issue 02</title>
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 03">
+<title>Signal / Noise — AI for VFX · Issue 03</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -58,64 +58,45 @@ nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12p
 <div class="wrap">
 <nav class="top"><a href="/">SIGNAL/NOISE</a><a href="/archive.html">ARCHIVE →</a><span><a href="/" class="lg on">EN</a> · <a href="/el/" class="lg">ΕΛ</a></span></nav>
 <header>
-<div class="tag"><span><b>●</b> Issue 02</span><span>Mon 16 Nov 2026</span><span>Covers 12–16 Nov</span></div>
+<div class="tag"><span><b>●</b> Issue 03</span><span>Thu 19 Nov 2026</span><span>Covers 16–19 Nov</span></div>
 <h1>Signal<span>/</span>Noise</h1>
 <p class="lede">AI news for VFX, motion and promo people: only what changes your work, explained in a few lines.</p>
 <div class="tldr">
 <h3>TL;DR, 30 SECONDS</h3>
 <ul>
-<li>A quiet post-MAX weekend: no major launches since Saturday, so this is a short catch-up issue.</li>
-<li>MiniMax released H3-Image as open weights: native 4K stills in about 10–16 seconds, with a restrictive licence.</li>
-<li>Pika put out H3 Flex, an open-weights text-to-video model, and OpenAI split Images 2.6 into fast and quality API models.</li>
-<li>Research: JEPA-Anything trains one world model across seven very different domains.</li>
+<li>A quiet week for video tools: no major video or 3D model launches since Monday, so this is a short issue.</li>
+<li>Microsoft launched MAI Image 2.7 at Ignite: it now tops an independent image-editing ranking, with transparent backgrounds, at a fraction of rival prices.</li>
+<li>OpenAI shipped GPT-6.2 Astra and Sol, with better slides, front-end and 3D web output.</li>
+<li>Runway open-sourced Praxis-1, a world model for robots, under Apache 2.0.</li>
 </ul>
 </div>
 </header>
 <h2 class="c1">On your desk · tools</h2>
-<div class="item has"><div class="n">01</div><div><div class="banner" data-label="MiniMax H3-Image" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">MiniMax H3-Image</div><span class="cr"></span></div>
-<span class="pill">Open weights</span><span class="pill">Image</span>
-<h4>MiniMax opens up H3-Image: native 4K stills, but read the licence</h4>
-<p>MiniMax published the weights of H3-Image (11 Nov), the stills sibling of its H3 video model. It is a 33-billion-parameter diffusion model that outputs around 16 MP natively, including wide 21:9 frames, in roughly 10–16 seconds through the API. Setup notes cover ComfyUI and diffusers.</p>
-<p>The catch is the licence: larger companies and anyone serving third parties need written permission, and the licence explicitly excludes the EU, UK, US and South Korea.</p>
-<div class="why"><b>WHY IT MATTERS</b>Native 4K and 21:9 straight out of the model means fewer upscale passes for backplates and key art. For broadcasters and studios based in the EU, the open weights can't be used commercially without a separate deal, so for now it's a test bench rather than a production tool.</div>
+<div class="item has"><div class="n">01</div><div><div class="banner" data-label="Microsoft · MAI Image 2.7" data-src="https://microsoft.ai/wp-content/uploads/2026/11/Image-2.7.jpg|https://microsoft.ai/wp-content/uploads/2026/11/MAI-Image-2.7-WithHeader-16x9-1.jpg" data-credit="Microsoft|Microsoft"><img alt="" referrerpolicy="no-referrer"><div class="fb">Microsoft · MAI Image 2.7</div><span class="cr"></span></div>
+<span class="pill hot">New</span><span class="pill">Image</span><span class="pill">Editing</span>
+<h4>Microsoft's MAI Image 2.7 aims squarely at image editing</h4>
+<p>Announced at Ignite on 17 Nov, MAI Image 2.7 and a faster Flash variant are in public preview on Microsoft Foundry and through partners including fal, OpenRouter and Vercel. Microsoft says the full model ranks first on Artificial Analysis' image-editing leaderboard, ahead of OpenAI's Sunburst, at around a fifth of the cost: roughly $35 per 1,000 images, or $10 for Flash.</p>
+<p>The pitch is targeted edits: change an object's colour, material or position without disturbing the rest of the frame, and keep consistency across a chain of edits. Both models can output transparent backgrounds. A new Canvas workspace is built around Flash.</p>
+<div class="why"><b>WHY IT MATTERS</b>Iterative, local edits with stable surroundings are what product shots and key-art variations need. Native alpha output means icons, logos and packshots can drop into a comp without a roto or keying pass. The rankings are Microsoft's own citation, so test it on your own material.</div>
 </div></div>
-
-<div class="item has"><div class="n">02</div><div><div class="banner" data-label="Pika H3 Flex" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Pika H3 Flex</div><span class="cr"></span></div>
-<span class="pill">Open weights</span><span class="pill">Video gen</span>
-<h4>Pika releases H3 Flex as an open-weights video model</h4>
-<p>Pika released H3 Flex with open weights. On DesignArena it currently tops the board for open-weights text-to-video models.</p>
-<div class="why"><b>WHY IT MATTERS</b>Open video models can run on your own GPUs, so footage and briefs never leave the building. That matters for embargoed promo material. Check the licence terms before any on-air use.</div>
-</div></div>
-
-<div class="item has"><div class="n">03</div><div><div class="banner" data-label="OpenAI · Images 2.6 API" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI · Images 2.6 API</div><span class="cr"></span></div>
-<span class="pill">OpenAI</span><span class="pill">Image</span>
-<h4>Images 2.6 reaches the API as two models: Flare and Sunburst</h4>
-<p>Following last issue’s ChatGPT update, the API now offers two image models: Flare for speed and Sunburst for quality. ChatGPT also gained SVG export alongside GIF output.</p>
-<div class="why"><b>WHY IT MATTERS</b>SVG export is the useful part for you: rough logo marks and icons that go straight into Illustrator or AE as shape layers, instead of raster you have to trace.</div>
-</div></div>
-
-<div class="grid">
-<div class="mini warn"><h4>⚠️ Heads-up: Kling 4.0 rollout</h4><p>Kling 4.0 (30-second clips, 10-keyframe control, 4K 10-bit HDR in the full version) rolled out in stages, with Flash at 720p first. If you tested it early, you probably saw the Flash tier, not the final quality.</p></div>
-</div>
 
 <h2 class="c3">Big picture · models & research</h2>
 <div class="grid">
-<div class="mini"><div class="banner" data-label="Meta Muse" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Meta Muse</div><span class="cr"></span></div><h4>Meta Muse Ember</h4><p>Meta released Muse Ember on 12 Nov, the smallest model in its Muse family, with closed weights.</p></div>
-<div class="mini"><div class="banner" data-label="JEPA · world models" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">JEPA · world models</div><span class="cr"></span></div><h4>JEPA corner: JEPA-Anything</h4><p>An academic team (NUS, Shanghai Jiao Tong, Edinburgh and others) trained one JEPA-style world model across seven domains, from vision and control to weather and molecules. It beat JEPA baselines on all ten matched tasks and splits dynamics into readable factors.</p></div>
-<div class="mini"><div class="banner" data-label="Open weights" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Open weights</div><span class="cr"></span></div><h4>Trend: open models catch up</h4><p>In one fortnight, MiniMax (image) and Pika (video) both released competitive open-weights models. Closed services still lead, but the gap for self-hosted generation is shrinking, while licences are getting tighter.</p></div>
+<div class="mini"><div class="banner" data-label="OpenAI GPT-6.2" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI GPT-6.2</div><span class="cr"></span></div><h4>GPT-6.2 Astra and Sol</h4><p>OpenAI released GPT-6.2 Astra (frontier) and Sol (everyday) on 17 Nov. Astra can rebuild slides from a file or screenshot, matching layout and typography, and builds stronger front-ends for 3D and web. Astra's API price drops 20%.</p></div>
+<div class="mini"><div class="banner" data-label="Runway Praxis-1" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Runway Praxis-1</div><span class="cr"></span></div><h4>World models: Runway Praxis-1</h4><p>Runway released Praxis-1, a 27B open-weights world action model for robot control, under Apache 2.0. Its benchmark lead is self-reported. Notable as a video-gen company pushing its world-model work beyond pictures.</p></div>
+<div class="mini"><div class="banner" data-label="Qwen4-Max · Hy4 flash" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Qwen4-Max · Hy4 flash</div><span class="cr"></span></div><h4>Multimodal models from China</h4><p>Alibaba made Qwen4-Max generally available internationally, covering text, image and video understanding, and Tencent released Hy4 flash, a cheaper multimodal model with a one-million-token context.</p></div>
 </div>
 
 <h2>Sources</h2>
 <ul class="src">
-<li><a href="https://neurohive.io/en/news/minimax-h3-image-4k-image-generation/">Neurohive: MiniMax H3-Image, open-weight native 4K images</a></li>
-<li><a href="https://aiweekly.co/alerts/minimax-open-sources-h3-image-331b-parameter-diffusion-model">AI Weekly: MiniMax open-sources H3-Image</a></li>
-<li><a href="https://thursdai.news/releases/2026-11">ThursdAI: Everything AI released in November 2026 (Pika H3 Flex, Images 2.6 API, Muse Ember)</a></li>
-<li><a href="https://lumalabs.ai/news/kling-4.0-vs-seedance-2.5">Luma: Kling 4.0 vs Seedance 2.5</a></li>
-<li><a href="https://aiweekly.co/editors-blog/found-first-jepa-anything-learns-one-world-model-across-7-domains-ai-nominated">AI Weekly: JEPA-Anything, one world model across 7 domains</a></li>
-<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026</a></li>
+<li><a href="https://microsoft.ai/news/introducing-mai-image-2-7/">Microsoft AI: Introducing MAI Image 2.7</a></li>
+<li><a href="https://scalevise.com/resources/microsoft-mai-image-2-7-flash-canvas-platform-rollout/">Scalevise: MAI Image 2.7 rollout, Flash, Canvas and pricing</a></li>
+<li><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol">OpenAI: Introducing GPT-6.2 Astra and Sol</a></li>
+<li><a href="https://letsdatascience.com/news/runway-releases-open-weight-praxis-1-robotics-model-under-ap-f0f77202">Let's Data Science: Runway releases open-weight Praxis-1</a></li>
+<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026 (Qwen4-Max, Hy4 flash, 15–19 Nov releases)</a></li>
 </ul>
 
-<footer>SIGNAL/NOISE · curated by Claude for a VFX/promo team · <a href="/archive.html" style="color:inherit">all issues</a></footer>
+<footer>SIGNAL/NOISE · curated by Claude for VFX, motion and promo people · <a href="/archive.html" style="color:inherit">all issues</a></footer>
 </div>
 <script src="/assets/sn.js"></script>
 </body>

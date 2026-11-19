@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 02">
-<title>Signal / Noise — AI for VFX · Issue 02</title>
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 03">
+<title>Signal / Noise — AI for VFX · Issue 03</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -58,64 +58,45 @@ nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12p
 <div class="wrap">
 <nav class="top"><a href="/el/">SIGNAL/NOISE</a><a href="/el/archive.html">ΑΡΧΕΙΟ →</a><span><a href="/" class="lg">EN</a> · <a href="/el/" class="lg on">ΕΛ</a></span></nav>
 <header>
-<div class="tag"><span><b>●</b> Τεύχος 02</span><span>Δευ 16 Νοε 2026</span><span>Καλύπτει 12–16 Νοε</span></div>
+<div class="tag"><span><b>●</b> Τεύχος 03</span><span>Πέμ 19 Νοε 2026</span><span>Καλύπτει 16–19 Νοε</span></div>
 <h1>Signal<span>/</span>Noise</h1>
 <p class="lede">Νέα AI για όσους δουλεύουν σε VFX, motion και promo: μόνο ό,τι αλλάζει τη δουλειά σου, σε λίγες γραμμές.</p>
 <div class="tldr">
 <h3>ΜΕ ΜΙΑ ΜΑΤΙΑ, 30 ΔΕΥΤΕΡΟΛΕΠΤΑ</h3>
 <ul>
-<li>Ήσυχο Σαββατοκύριακο μετά το MAX: καμία μεγάλη κυκλοφορία από το Σάββατο, οπότε αυτό είναι ένα σύντομο τεύχος για ό,τι μας ξέφυγε.</li>
-<li>Η MiniMax κυκλοφόρησε το H3-Image με ανοιχτά weights: εγγενείς εικόνες 4K σε περίπου 10–16 δευτερόλεπτα, με περιοριστική άδεια.</li>
-<li>Το Pika έβγαλε το H3 Flex, ένα open-weights μοντέλο text-to-video, και η OpenAI χώρισε το Images 2.6 σε γρήγορο και ποιοτικό μοντέλο στο API.</li>
-<li>Έρευνα: το JEPA-Anything εκπαιδεύει ένα μοντέλο κόσμου σε επτά πολύ διαφορετικά πεδία.</li>
+<li>Ήσυχη εβδομάδα για τα εργαλεία βίντεο: καμία μεγάλη κυκλοφορία μοντέλου βίντεο ή 3D από τη Δευτέρα, οπότε το τεύχος είναι σύντομο.</li>
+<li>Η Microsoft παρουσίασε το MAI Image 2.7 στο Ignite: πρώτο σε ανεξάρτητη κατάταξη επεξεργασίας εικόνας, με διάφανο φόντο και τιμή πολύ χαμηλότερη από τους ανταγωνιστές.</li>
+<li>Η OpenAI κυκλοφόρησε τα GPT-6.2 Astra και Sol, με καλύτερα slides, front-end και 3D για το web.</li>
+<li>Η Runway έδωσε ανοιχτά το Praxis-1, ένα world model για ρομπότ, με άδεια Apache 2.0.</li>
 </ul>
 </div>
 </header>
 <h2 class="c1">Στο γραφείο σου · εργαλεία</h2>
-<div class="item has"><div class="n">01</div><div><div class="banner" data-label="MiniMax H3-Image" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">MiniMax H3-Image</div><span class="cr"></span></div>
-<span class="pill">Open weights</span><span class="pill">Εικόνα</span>
-<h4>Η MiniMax ανοίγει το H3-Image: εγγενές 4K, αλλά διάβασε την άδεια</h4>
-<p>Η MiniMax δημοσίευσε τα weights του H3-Image (11 Νοε), του «αδερφού» για ακίνητη εικόνα του video μοντέλου H3. Είναι ένα diffusion μοντέλο 33 δισ. παραμέτρων που βγάζει εγγενώς περίπου 16 MP, και σε φαρδιά κάδρα 21:9, σε περίπου 10–16 δευτερόλεπτα μέσω API. Υπάρχουν οδηγίες εγκατάστασης για ComfyUI και diffusers.</p>
-<p>Το πρόβλημα είναι η άδεια: οι μεγαλύτερες εταιρείες και όποιος εξυπηρετεί τρίτους χρειάζονται γραπτή άδεια, και η άδεια εξαιρεί ρητά ΕΕ, Ηνωμένο Βασίλειο, ΗΠΑ και Νότια Κορέα.</p>
-<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Εγγενές 4K και 21:9 απευθείας από το μοντέλο σημαίνει λιγότερα upscale για backplates και key art. Για broadcasters και στούντιο με έδρα την ΕΕ, τα ανοιχτά weights δεν επιτρέπεται να χρησιμοποιηθούν εμπορικά χωρίς ξεχωριστή συμφωνία, οπότε προς το παρόν είναι εργαλείο δοκιμών, όχι παραγωγής.</div>
+<div class="item has"><div class="n">01</div><div><div class="banner" data-label="Microsoft · MAI Image 2.7" data-src="https://microsoft.ai/wp-content/uploads/2026/11/Image-2.7.jpg|https://microsoft.ai/wp-content/uploads/2026/11/MAI-Image-2.7-WithHeader-16x9-1.jpg" data-credit="Microsoft|Microsoft"><img alt="" referrerpolicy="no-referrer"><div class="fb">Microsoft · MAI Image 2.7</div><span class="cr"></span></div>
+<span class="pill hot">Νέο</span><span class="pill">Εικόνα</span><span class="pill">Επεξεργασία</span>
+<h4>Το MAI Image 2.7 της Microsoft στοχεύει στην επεξεργασία εικόνας</h4>
+<p>Το MAI Image 2.7 και η ταχύτερη έκδοση Flash ανακοινώθηκαν στο Ignite στις 17 Νοε και είναι σε public preview στο Microsoft Foundry και μέσω συνεργατών όπως fal, OpenRouter και Vercel. Η Microsoft αναφέρει ότι το πλήρες μοντέλο είναι πρώτο στην κατάταξη image editing του Artificial Analysis, πάνω από το Sunburst της OpenAI, με περίπου το ένα πέμπτο του κόστους: γύρω στα 35 $ ανά 1.000 εικόνες, ή 10 $ για το Flash.</p>
+<p>Το δυνατό του σημείο είναι οι στοχευμένες αλλαγές: αλλάζεις χρώμα, υλικό ή θέση ενός αντικειμένου χωρίς να πειράξεις το υπόλοιπο κάδρο, και η συνέπεια διατηρείται σε διαδοχικά edits. Και τα δύο μοντέλα βγάζουν διάφανο φόντο. Ένα νέο workspace, το Canvas, βασίζεται στο Flash.</p>
+<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Επαναληπτικά, τοπικά edits με σταθερό περιβάλλον είναι ό,τι χρειάζονται τα product shots και οι παραλλαγές key art. Με εγγενές alpha, εικονίδια, logos και packshots μπαίνουν σε comp χωρίς roto ή keying. Οι κατατάξεις τις επικαλείται η ίδια η Microsoft, οπότε δοκίμασέ το στο δικό σου υλικό.</div>
 </div></div>
-
-<div class="item has"><div class="n">02</div><div><div class="banner" data-label="Pika H3 Flex" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Pika H3 Flex</div><span class="cr"></span></div>
-<span class="pill">Open weights</span><span class="pill">Video gen</span>
-<h4>Το Pika κυκλοφορεί το H3 Flex ως open-weights μοντέλο βίντεο</h4>
-<p>Το Pika κυκλοφόρησε το H3 Flex με ανοιχτά weights. Στο DesignArena είναι αυτή τη στιγμή πρώτο στην κατάταξη για open-weights text-to-video μοντέλα.</p>
-<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Τα ανοιχτά μοντέλα βίντεο τρέχουν στις δικές σας GPU, οπότε το υλικό και τα briefs δεν φεύγουν ποτέ από το κτίριο. Αυτό μετράει για promo υλικό υπό embargo. Έλεγξε τους όρους της άδειας πριν από οποιαδήποτε on-air χρήση.</div>
-</div></div>
-
-<div class="item has"><div class="n">03</div><div><div class="banner" data-label="OpenAI · Images 2.6 API" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI · Images 2.6 API</div><span class="cr"></span></div>
-<span class="pill">OpenAI</span><span class="pill">Εικόνα</span>
-<h4>Το Images 2.6 φτάνει στο API ως δύο μοντέλα: Flare και Sunburst</h4>
-<p>Μετά την ενημέρωση του ChatGPT που είδαμε στο προηγούμενο τεύχος, το API προσφέρει πλέον δύο μοντέλα εικόνας: το Flare για ταχύτητα και το Sunburst για ποιότητα. Το ChatGPT απέκτησε επίσης εξαγωγή SVG δίπλα στα GIF.</p>
-<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Η εξαγωγή SVG είναι το χρήσιμο κομμάτι για σένα: πρόχειρα logo marks και εικονίδια που μπαίνουν κατευθείαν στο Illustrator ή στο AE ως shape layers, αντί για raster που πρέπει να κάνεις trace.</div>
-</div></div>
-
-<div class="grid">
-<div class="mini warn"><h4>⚠️ Προσοχή: σταδιακή διάθεση του Kling 4.0</h4><p>Το Kling 4.0 (κλιπ 30 δευτερολέπτων, έλεγχος με 10 keyframes, 4K 10-bit HDR στην πλήρη έκδοση) κυκλοφόρησε σταδιακά, πρώτα η έκδοση Flash στα 720p. Αν το δοκίμασες νωρίς, μάλλον είδες το Flash και όχι την τελική ποιότητα.</p></div>
-</div>
 
 <h2 class="c3">Η μεγάλη εικόνα · μοντέλα & έρευνα</h2>
 <div class="grid">
-<div class="mini"><div class="banner" data-label="Meta Muse" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Meta Muse</div><span class="cr"></span></div><h4>Meta Muse Ember</h4><p>Η Meta κυκλοφόρησε στις 12 Νοε το Muse Ember, το μικρότερο μοντέλο της οικογένειας Muse, με κλειστά weights.</p></div>
-<div class="mini"><div class="banner" data-label="JEPA · world models" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">JEPA · world models</div><span class="cr"></span></div><h4>Γωνιά JEPA: JEPA-Anything</h4><p>Μια ακαδημαϊκή ομάδα (NUS, Shanghai Jiao Tong, Εδιμβούργο κ.ά.) εκπαίδευσε ένα μοντέλο κόσμου τύπου JEPA σε επτά πεδία, από όραση και έλεγχο μέχρι καιρό και μόρια. Ξεπέρασε τα JEPA baselines και στις δέκα αντίστοιχες δοκιμές και χωρίζει τη δυναμική σε κατανοητούς παράγοντες.</p></div>
-<div class="mini"><div class="banner" data-label="Open weights" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Open weights</div><span class="cr"></span></div><h4>Τάση: τα ανοιχτά μοντέλα πλησιάζουν</h4><p>Μέσα σε ένα δεκαπενθήμερο, η MiniMax (εικόνα) και το Pika (βίντεο) έβγαλαν ανταγωνιστικά open-weights μοντέλα. Οι κλειστές υπηρεσίες προηγούνται ακόμα, αλλά η απόσταση για generation σε δικό σου hardware μικραίνει, ενώ οι άδειες γίνονται αυστηρότερες.</p></div>
+<div class="mini"><div class="banner" data-label="OpenAI GPT-6.2" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI GPT-6.2</div><span class="cr"></span></div><h4>GPT-6.2 Astra και Sol</h4><p>Η OpenAI κυκλοφόρησε στις 17 Νοε τα GPT-6.2 Astra (frontier) και Sol (καθημερινό). Το Astra ξαναφτιάχνει slides από αρχείο ή screenshot, κρατώντας layout και τυπογραφία, και φτιάχνει καλύτερα front-ends για 3D και web. Η τιμή API του Astra πέφτει 20%.</p></div>
+<div class="mini"><div class="banner" data-label="Runway Praxis-1" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Runway Praxis-1</div><span class="cr"></span></div><h4>World models: Runway Praxis-1</h4><p>Η Runway κυκλοφόρησε το Praxis-1, ένα world action model 27B με ανοιχτά weights για έλεγχο ρομπότ, με άδεια Apache 2.0. Το προβάδισμα στα benchmarks το δηλώνει η ίδια. Αξιοσημείωτο ότι μια εταιρεία video gen επεκτείνει τα world models της πέρα από την εικόνα.</p></div>
+<div class="mini"><div class="banner" data-label="Qwen4-Max · Hy4 flash" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Qwen4-Max · Hy4 flash</div><span class="cr"></span></div><h4>Πολυτροπικά μοντέλα από την Κίνα</h4><p>Η Alibaba διέθεσε διεθνώς το Qwen4-Max, που καταλαβαίνει κείμενο, εικόνα και βίντεο, και η Tencent κυκλοφόρησε το Hy4 flash, ένα φθηνότερο πολυτροπικό μοντέλο με context ενός εκατομμυρίου tokens.</p></div>
 </div>
 
 <h2>Πηγές</h2>
 <ul class="src">
-<li><a href="https://neurohive.io/en/news/minimax-h3-image-4k-image-generation/">Neurohive: MiniMax H3-Image, open-weight native 4K images</a></li>
-<li><a href="https://aiweekly.co/alerts/minimax-open-sources-h3-image-331b-parameter-diffusion-model">AI Weekly: MiniMax open-sources H3-Image</a></li>
-<li><a href="https://thursdai.news/releases/2026-11">ThursdAI: Everything AI released in November 2026 (Pika H3 Flex, Images 2.6 API, Muse Ember)</a></li>
-<li><a href="https://lumalabs.ai/news/kling-4.0-vs-seedance-2.5">Luma: Kling 4.0 vs Seedance 2.5</a></li>
-<li><a href="https://aiweekly.co/editors-blog/found-first-jepa-anything-learns-one-world-model-across-7-domains-ai-nominated">AI Weekly: JEPA-Anything, one world model across 7 domains</a></li>
-<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026</a></li>
+<li><a href="https://microsoft.ai/news/introducing-mai-image-2-7/">Microsoft AI: Introducing MAI Image 2.7</a></li>
+<li><a href="https://scalevise.com/resources/microsoft-mai-image-2-7-flash-canvas-platform-rollout/">Scalevise: MAI Image 2.7 rollout, Flash, Canvas and pricing</a></li>
+<li><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol">OpenAI: Introducing GPT-6.2 Astra and Sol</a></li>
+<li><a href="https://letsdatascience.com/news/runway-releases-open-weight-praxis-1-robotics-model-under-ap-f0f77202">Let's Data Science: Runway releases open-weight Praxis-1</a></li>
+<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026 (Qwen4-Max, Hy4 flash, 15–19 Nov releases)</a></li>
 </ul>
 
-<footer>SIGNAL/NOISE · επιμέλεια: Claude για ομάδα VFX/promo · <a href="/el/archive.html" style="color:inherit">όλα τα τεύχη</a></footer>
+<footer>SIGNAL/NOISE · επιμέλεια: Claude για όσους δουλεύουν σε VFX, motion και promo · <a href="/el/archive.html" style="color:inherit">όλα τα τεύχη</a></footer>
 </div>
 <script src="/assets/sn.js"></script>
 </body>
