@@ -79,16 +79,20 @@ def main():
         status["slides"] = len(slides)
 
         if mode == "post":
-            if not 2 <= len(slides) <= 10:
-                raise RuntimeError(f"a carousel needs 2-10 slides, got {len(slides)}")
-            children = []
-            for n, u in zip(slides, urls):
-                c = api("POST", f"{IG_ID}/media", image_url=u, is_carousel_item="true")["id"]
-                wait_ready(c, n)
-                children.append(c)
-            car = api("POST", f"{IG_ID}/media", media_type="CAROUSEL",
-                      children=",".join(children), caption=job.get("caption", ""))["id"]
-            wait_ready(car, "carousel")
+            if not 1 <= len(slides) <= 10:
+                raise RuntimeError(f"a post needs 1-10 slides, got {len(slides)}")
+            if len(slides) == 1:
+                car = api("POST", f"{IG_ID}/media", image_url=urls[0], caption=job.get("caption", ""))["id"]
+                wait_ready(car, "image")
+            else:
+                children = []
+                for n, u in zip(slides, urls):
+                    c = api("POST", f"{IG_ID}/media", image_url=u, is_carousel_item="true")["id"]
+                    wait_ready(c, n)
+                    children.append(c)
+                car = api("POST", f"{IG_ID}/media", media_type="CAROUSEL",
+                          children=",".join(children), caption=job.get("caption", ""))["id"]
+                wait_ready(car, "carousel")
             pid = api("POST", f"{IG_ID}/media_publish", creation_id=car)["id"]
             status["post_id"] = pid
             try:
