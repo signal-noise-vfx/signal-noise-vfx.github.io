@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 03">
-<title>Signal / Noise — AI for VFX · Issue 03</title>
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 04">
+<title>Signal / Noise — AI for VFX · Issue 04</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -58,42 +58,48 @@ nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12p
 <div class="wrap">
 <nav class="top"><a href="/">SIGNAL/NOISE</a><a href="/archive.html">ARCHIVE →</a><span><a href="/" class="lg on">EN</a> · <a href="/el/" class="lg">ΕΛ</a></span></nav>
 <header>
-<div class="tag"><span><b>●</b> Issue 03</span><span>Thu 19 Nov 2026</span><span>Covers 16–19 Nov</span></div>
+<div class="tag"><span><b>●</b> Issue 04</span><span>Thu 26 Nov 2026</span><span>Covers 20–26 Nov</span></div>
 <h1>Signal<span>/</span>Noise</h1>
 <p class="lede">AI news for VFX, motion and promo people: only what changes your work, explained in a few lines.</p>
 <div class="tldr">
 <h3>TL;DR, 30 SECONDS</h3>
 <ul>
-<li>A quiet week for video tools: no major video or 3D model launches since Monday, so this is a short issue.</li>
-<li>Microsoft launched MAI Image 2.7 at Ignite: it now tops an independent image-editing ranking, with transparent backgrounds, at a fraction of rival prices.</li>
-<li>OpenAI shipped GPT-6.2 Astra and Sol, with better slides, front-end and 3D web output.</li>
-<li>Runway open-sourced Praxis-1, a world model for robots, under Apache 2.0.</li>
+<li>Another quiet week for video, image and 3D tools: no major launches since 19 Nov, so this is a short issue.</li>
+<li>Claude now supports MCP Tasks and Elicitation, with Skills over MCP in beta, which matters as Adobe and Maxon both ship MCP servers.</li>
+<li>The New York Times reportedly told freelance photographers to stay on older Photoshop versions over AI-tagging concerns.</li>
+<li>Open models keep getting smaller and smarter: Thinking Machines' Inkling 2 Mini and Z.ai's GLM-5.4 both use looped layers.</li>
 </ul>
 </div>
 </header>
 <h2 class="c1">On your desk · tools</h2>
-<div class="item has"><div class="n">01</div><div><div class="banner" data-label="Microsoft · MAI Image 2.7" data-src="https://microsoft.ai/wp-content/uploads/2026/11/Image-2.7.jpg|https://microsoft.ai/wp-content/uploads/2026/11/MAI-Image-2.7-WithHeader-16x9-1.jpg" data-credit="Microsoft|Microsoft"><img alt="" referrerpolicy="no-referrer"><div class="fb">Microsoft · MAI Image 2.7</div><span class="cr"></span></div>
-<span class="pill hot">New</span><span class="pill">Image</span><span class="pill">Editing</span>
-<h4>Microsoft's MAI Image 2.7 aims squarely at image editing</h4>
-<p>Announced at Ignite on 17 Nov, MAI Image 2.7 and a faster Flash variant are in public preview on Microsoft Foundry and through partners including fal, OpenRouter and Vercel. Microsoft says the full model ranks first on Artificial Analysis' image-editing leaderboard, ahead of OpenAI's Sunburst, at around a fifth of the cost: roughly $35 per 1,000 images, or $10 for Flash.</p>
-<p>The pitch is targeted edits: change an object's colour, material or position without disturbing the rest of the frame, and keep consistency across a chain of edits. Both models can output transparent backgrounds. A new Canvas workspace is built around Flash.</p>
-<div class="why"><b>WHY IT MATTERS</b>Iterative, local edits with stable surroundings are what product shots and key-art variations need. Native alpha output means icons, logos and packshots can drop into a comp without a roto or keying pass. The rankings are Microsoft's own citation, so test it on your own material.</div>
+<div class="item has"><div class="n">01</div><div><div class="banner" data-label="Claude · MCP Tasks & Skills" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Claude · MCP Tasks & Skills</div><span class="cr"></span></div>
+<span class="pill hot">New</span><span class="pill">Agents</span><span class="pill">Pipeline</span>
+<h4>Claude's MCP support grows up: long-running tasks and Skills</h4>
+<p>Anthropic made MCP Tasks and Elicitation generally available in Claude on 24 Nov, and put Skills over MCP into public beta. Tasks let a connected server run a job that takes a while and report back; Elicitation lets a server stop and ask the user for missing input; Skills let a server ship its own instructions for how it should be used.</p>
+<p>This lands as creative apps open up to agents: Adobe launched an MCP server alongside its MAX AI updates, and Maxon added one to Cinema 4D 2026.4 in September.</p>
+<div class="why"><b>WHY IT MATTERS</b>Renders, exports and batch conforms are long jobs. Support for long-running tasks and mid-job questions is what moves "an assistant that drives After Effects or C4D" from a demo towards something you could leave running on a real batch.</div>
 </div></div>
+<div class="grid">
+<div class="mini warn"><h4>⚠️ Heads-up: Photoshop and AI labels</h4><p>DPReview reports that The New York Times asked freelance photographers to keep using older Photoshop versions, because newer builds with generative features may mark files as AI-edited. Newsrooms, agencies and broadcasters with strict provenance rules should check what their current Creative Cloud builds write into metadata.</p></div>
+</div>
 
 <h2 class="c3">Big picture · models & research</h2>
 <div class="grid">
-<div class="mini"><div class="banner" data-label="OpenAI GPT-6.2" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">OpenAI GPT-6.2</div><span class="cr"></span></div><h4>GPT-6.2 Astra and Sol</h4><p>OpenAI released GPT-6.2 Astra (frontier) and Sol (everyday) on 17 Nov. Astra can rebuild slides from a file or screenshot, matching layout and typography, and builds stronger front-ends for 3D and web. Astra's API price drops 20%.</p></div>
-<div class="mini"><div class="banner" data-label="Runway Praxis-1" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Runway Praxis-1</div><span class="cr"></span></div><h4>World models: Runway Praxis-1</h4><p>Runway released Praxis-1, a 27B open-weights world action model for robot control, under Apache 2.0. Its benchmark lead is self-reported. Notable as a video-gen company pushing its world-model work beyond pictures.</p></div>
-<div class="mini"><div class="banner" data-label="Qwen4-Max · Hy4 flash" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Qwen4-Max · Hy4 flash</div><span class="cr"></span></div><h4>Multimodal models from China</h4><p>Alibaba made Qwen4-Max generally available internationally, covering text, image and video understanding, and Tencent released Hy4 flash, a cheaper multimodal model with a one-million-token context.</p></div>
+<div class="mini"><div class="banner" data-label="Inkling 2 Mini" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Inkling 2 Mini</div><span class="cr"></span></div><h4>Inkling 2 Mini, open and local</h4><p>Thinking Machines Lab released Inkling 2 Mini on Hugging Face (20 Nov): an open multimodal model with about 26B parameters, of which only 3B are active at a time, so it can run on a workstation. Useful for offline tagging and shot logging.</p></div>
+<div class="mini"><div class="banner" data-label="GLM-5.4" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">GLM-5.4</div><span class="cr"></span></div><h4>GLM-5.4's looped transformer</h4><p>Z.ai launched GLM-5.4 on 23 Nov, which it calls the first looped-transformer model: the same layers are run several times instead of stacking more of them. Open weights are planned; for now access is through its paid coding plan.</p></div>
+<div class="mini"><div class="banner" data-label="AI does maths" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">AI does maths</div><span class="cr"></span></div><h4>AI proofs go big</h4><p>A researcher working with Claude published a claimed formal proof of the Riemann hypothesis in Lean, around 17 million lines long (20 Nov). Mathematicians expect months of review. OpenAI and Google also posted unreviewed AI-assisted maths results this week.</p></div>
 </div>
 
 <h2>Sources</h2>
 <ul class="src">
-<li><a href="https://microsoft.ai/news/introducing-mai-image-2-7/">Microsoft AI: Introducing MAI Image 2.7</a></li>
-<li><a href="https://scalevise.com/resources/microsoft-mai-image-2-7-flash-canvas-platform-rollout/">Scalevise: MAI Image 2.7 rollout, Flash, Canvas and pricing</a></li>
-<li><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol">OpenAI: Introducing GPT-6.2 Astra and Sol</a></li>
-<li><a href="https://letsdatascience.com/news/runway-releases-open-weight-praxis-1-robotics-model-under-ap-f0f77202">Let's Data Science: Runway releases open-weight Praxis-1</a></li>
-<li><a href="https://www.nocode.mba/ai-release-tracker/2026/11">NoCode MBA: AI release tracker, November 2026 (Qwen4-Max, Hy4 flash, 15–19 Nov releases)</a></li>
+<li><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/mcp-servers-can-now-teach-skills-and-run-tasks">StartupHub: MCP servers can now teach Skills and run Tasks</a></li>
+<li><a href="https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/">TechCrunch: Adobe adds more AI to its products and launches an MCP</a></li>
+<li><a href="https://www.cgchannel.com/2026/09/maxon-releases-cinema-4d-2026-4-with-a-new-mcp-server/">CG Channel: Maxon releases Cinema 4D 2026.4 with a new MCP server</a></li>
+<li><a href="https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/">DPReview: New York Times Photoshop restriction over AI</a></li>
+<li><a href="https://huggingface.co/blog/inkling2mini">Hugging Face: Inkling 2 Mini</a></li>
+<li><a href="https://simonwillison.net/2026/Nov/23/glm-54/">Simon Willison: GLM-5.4</a></li>
+<li><a href="https://www.wired.com/story/ai-solved-maths-most-famous-problem/">Wired: AI and the Riemann hypothesis</a></li>
+<li><a href="https://dentro.de/ai/news/">dentro.de: AI news, November 2026</a></li>
 </ul>
 
 <footer>SIGNAL/NOISE · curated by Claude for VFX, motion and promo people · <a href="/archive.html" style="color:inherit">all issues</a></footer>

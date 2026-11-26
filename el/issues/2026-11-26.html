@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Signal/Noise — AI news for VFX · Issue 04">
+<title>Signal / Noise — AI for VFX · Issue 04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d10;--card:#15171c;--line:#262a32;--ink:#eef0f3;--dim:#9aa1ad;--red:#ff3b30;--amber:#ffb020;--cyan:#34d3ee;--violet:#a78bfa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 60px}
+.bars{display:flex;height:8px}.bars i{flex:1}
+.bars i:nth-child(1){background:#fff}.bars i:nth-child(2){background:#ffe600}.bars i:nth-child(3){background:#00e5ff}.bars i:nth-child(4){background:#00e676}.bars i:nth-child(5){background:#ff00c8}.bars i:nth-child(6){background:var(--red)}.bars i:nth-child(7){background:#2962ff}
+header{padding:42px 0 28px;border-bottom:1px solid var(--line)}
+.tag{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.14em;color:var(--dim);text-transform:uppercase;display:flex;gap:14px;flex-wrap:wrap}
+.tag b{color:var(--red)}
+h1{font:700 clamp(44px,9vw,84px)/.92 'Space Grotesk',sans-serif;margin:14px 0 14px;letter-spacing:-.03em}
+h1 span{color:var(--red)}
+.lede{color:var(--dim);font-size:18px;max-width:620px;margin:0}
+.tldr{margin:28px 0 8px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:18px 20px}
+.tldr h3{margin:0 0 8px;font:700 13px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--red)}
+.tldr ul{margin:0;padding-left:18px}.tldr li{margin:4px 0}
+h2{font:700 13px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;margin:44px 0 16px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.c1{color:var(--amber)}.c2{color:var(--cyan)}.c3{color:var(--violet)}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:36px;display:grid;grid-template-columns:52px 1fr;gap:16px}
+.n{font:700 30px/1 'Space Grotesk';color:#3a3f49}
+.item h4{margin:0 0 6px;font:700 20px/1.25 'Space Grotesk',sans-serif}
+.item p{margin:0 0 8px;color:#cfd3da}
+.why{font-size:14px;color:var(--ink);background:#1d2027;border-radius:8px;padding:8px 12px;margin-top:6px}
+.why b{color:var(--amber);font:600 11px 'JetBrains Mono',monospace;letter-spacing:.1em;margin-right:6px}
+.pill{display:inline-block;font:500 11px 'JetBrains Mono',monospace;padding:3px 8px;border-radius:99px;border:1px solid var(--line);color:var(--dim);margin-right:6px}
+.hot{border-color:var(--red);color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.mini h4{margin:0 0 6px;font:700 17px 'Space Grotesk'}
+.mini p{margin:0;color:#cfd3da;font-size:15px}
+.warn{border-color:#5a3b10;background:#1c160c}
+.src{font-size:13px;color:var(--dim)}.src a{color:var(--cyan);text-decoration:none}
+.src li{margin:3px 0}
+.banner{position:relative;height:230px;margin:-18px -20px 14px;border-radius:12px 12px 0 0;overflow:hidden;background:linear-gradient(120deg,#1d2027,#2a1015)}
+.banner img{width:100%;height:100%;object-fit:cover;display:none}.banner.ok img{display:block}.banner .art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.banner .fb{position:absolute;inset:0;display:none;align-items:flex-end;padding:14px 18px;font:700 30px 'Space Grotesk';letter-spacing:-.02em;color:#fff;text-shadow:0 2px 18px #000}.banner.gen .fb{display:flex}
+
+.banner .cr:empty{display:none}.banner .cr{position:absolute;right:8px;bottom:6px;font:500 10px 'JetBrains Mono';color:#fff;background:#0009;padding:2px 6px;border-radius:4px}
+.item.has{grid-template-columns:1fr}.item.has .n{display:none}
+.mini .banner{height:120px;margin:-16px -18px 12px}
+nav.top{display:flex;justify-content:space-between;padding:14px 0 0;font:500 12px 'JetBrains Mono';letter-spacing:.1em}nav.top a{color:var(--dim);text-decoration:none}
+.lg{color:var(--dim);text-decoration:none;padding:2px 4px}.lg.on{color:#fff;border-bottom:2px solid var(--red)}footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font:500 12px 'JetBrains Mono',monospace;color:var(--dim)}
+@media(max-width:520px){.item{grid-template-columns:1fr;gap:4px}.n{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+<nav class="top"><a href="/el/">SIGNAL/NOISE</a><a href="/el/archive.html">ΑΡΧΕΙΟ →</a><span><a href="/issues/2026-11-26.html" class="lg">EN</a> · <a href="/el/issues/2026-11-26.html" class="lg on">ΕΛ</a></span></nav>
+<header>
+<div class="tag"><span><b>●</b> Τεύχος 04</span><span>Πέμ 26 Νοε 2026</span><span>Καλύπτει 20–26 Νοε</span></div>
+<h1>Signal<span>/</span>Noise</h1>
+<p class="lede">Νέα AI για όσους δουλεύουν σε VFX, motion και promo: μόνο ό,τι αλλάζει τη δουλειά σου, σε λίγες γραμμές.</p>
+<div class="tldr">
+<h3>ΜΕ ΜΙΑ ΜΑΤΙΑ, 30 ΔΕΥΤΕΡΟΛΕΠΤΑ</h3>
+<ul>
+<li>Ακόμη μια ήσυχη εβδομάδα για εργαλεία βίντεο, εικόνας και 3D: καμία μεγάλη κυκλοφορία από τις 19 Νοε, οπότε το τεύχος είναι σύντομο.</li>
+<li>Το Claude υποστηρίζει πλέον MCP Tasks και Elicitation, με Skills over MCP σε beta, κάτι σημαντικό τώρα που Adobe και Maxon έχουν MCP servers.</li>
+<li>Οι New York Times φέρεται να ζήτησαν από freelance φωτογράφους να μείνουν σε παλαιότερες εκδόσεις του Photoshop, λόγω ανησυχιών για σήμανση AI.</li>
+<li>Τα ανοιχτά μοντέλα γίνονται μικρότερα και εξυπνότερα: τα Inkling 2 Mini και GLM-5.4 χρησιμοποιούν και τα δύο looped layers.</li>
+</ul>
+</div>
+</header>
+<h2 class="c1">Στο γραφείο σου · εργαλεία</h2>
+<div class="item has"><div class="n">01</div><div><div class="banner" data-label="Claude · MCP Tasks & Skills" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Claude · MCP Tasks & Skills</div><span class="cr"></span></div>
+<span class="pill hot">Νέο</span><span class="pill">Agents</span><span class="pill">Pipeline</span>
+<h4>Η υποστήριξη MCP στο Claude ωριμάζει: μακροχρόνιες εργασίες και Skills</h4>
+<p>Η Anthropic έκανε γενικά διαθέσιμα τα MCP Tasks και Elicitation στο Claude στις 24 Νοε και έβαλε τα Skills over MCP σε δημόσια beta. Τα Tasks επιτρέπουν σε έναν συνδεδεμένο server να τρέξει μια εργασία που κρατά ώρα και να αναφέρει το αποτέλεσμα· το Elicitation του επιτρέπει να σταματήσει και να ζητήσει από τον χρήστη ό,τι λείπει· τα Skills επιτρέπουν στον server να φέρνει τις δικές του οδηγίες χρήσης.</p>
+<p>Έρχεται τη στιγμή που οι δημιουργικές εφαρμογές ανοίγουν στους agents: η Adobe παρουσίασε MCP server μαζί με τις AI ενημερώσεις του MAX, και η Maxon πρόσθεσε έναν στο Cinema 4D 2026.4 τον Σεπτέμβριο.</p>
+<div class="why"><b>ΓΙΑΤΙ ΜΕΤΡΑΕΙ</b>Τα renders, τα exports και τα μαζικά conforms είναι μεγάλες δουλειές. Η υποστήριξη για μακροχρόνιες εργασίες και ερωτήσεις στη μέση της δουλειάς είναι αυτό που πάει τον «βοηθό που χειρίζεται After Effects ή C4D» από το demo προς κάτι που μπορείς να αφήσεις να τρέχει σε πραγματικό batch.</div>
+</div></div>
+<div class="grid">
+<div class="mini warn"><h4>⚠️ Προσοχή: Photoshop και σήμανση AI</h4><p>Το DPReview αναφέρει ότι οι New York Times ζήτησαν από freelance φωτογράφους να συνεχίσουν με παλαιότερες εκδόσεις του Photoshop, επειδή οι νεότερες με generative λειτουργίες μπορεί να σημαίνουν τα αρχεία ως επεξεργασμένα με AI. Ειδησεογραφικοί οργανισμοί, agencies και broadcasters με αυστηρούς κανόνες provenance καλό είναι να ελέγξουν τι γράφουν στα metadata οι τρέχουσες εκδόσεις του Creative Cloud.</p></div>
+</div>
+
+<h2 class="c3">Η μεγάλη εικόνα · μοντέλα & έρευνα</h2>
+<div class="grid">
+<div class="mini"><div class="banner" data-label="Inkling 2 Mini" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">Inkling 2 Mini</div><span class="cr"></span></div><h4>Inkling 2 Mini, ανοιχτό και τοπικό</h4><p>Το Thinking Machines Lab κυκλοφόρησε το Inkling 2 Mini στο Hugging Face (20 Νοε): ανοιχτό πολυτροπικό μοντέλο με περίπου 26B παραμέτρους, από τις οποίες μόνο 3B είναι ενεργές κάθε φορά, άρα τρέχει σε workstation. Χρήσιμο για offline tagging και καταγραφή πλάνων.</p></div>
+<div class="mini"><div class="banner" data-label="GLM-5.4" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">GLM-5.4</div><span class="cr"></span></div><h4>Το looped transformer του GLM-5.4</h4><p>Η Z.ai παρουσίασε στις 23 Νοε το GLM-5.4, που το χαρακτηρίζει πρώτο μοντέλο looped transformer: τα ίδια layers τρέχουν πολλές φορές αντί να προστίθενται περισσότερα. Ανοιχτά weights έχουν προγραμματιστεί· προς το παρόν η πρόσβαση γίνεται μέσω του συνδρομητικού coding plan.</p></div>
+<div class="mini"><div class="banner" data-label="AI και μαθηματικά" data-src="" data-credit=""><img alt="" referrerpolicy="no-referrer"><div class="fb">AI και μαθηματικά</div><span class="cr"></span></div><h4>Οι αποδείξεις με AI μεγαλώνουν</h4><p>Ερευνητής που δούλεψε με το Claude δημοσίευσε μια υποτιθέμενη τυπική απόδειξη της υπόθεσης Riemann σε Lean, περίπου 17 εκατομμύρια γραμμές (20 Νοε). Οι μαθηματικοί αναμένουν μήνες ελέγχου. Και οι OpenAI και Google ανέβασαν αυτή την εβδομάδα μαθηματικά αποτελέσματα με AI, χωρίς ακόμη αξιολόγηση.</p></div>
+</div>
+
+<h2>Πηγές</h2>
+<ul class="src">
+<li><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/mcp-servers-can-now-teach-skills-and-run-tasks">StartupHub: MCP servers can now teach Skills and run Tasks</a></li>
+<li><a href="https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/">TechCrunch: Adobe adds more AI to its products and launches an MCP</a></li>
+<li><a href="https://www.cgchannel.com/2026/09/maxon-releases-cinema-4d-2026-4-with-a-new-mcp-server/">CG Channel: Maxon releases Cinema 4D 2026.4 with a new MCP server</a></li>
+<li><a href="https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/">DPReview: New York Times Photoshop restriction over AI</a></li>
+<li><a href="https://huggingface.co/blog/inkling2mini">Hugging Face: Inkling 2 Mini</a></li>
+<li><a href="https://simonwillison.net/2026/Nov/23/glm-54/">Simon Willison: GLM-5.4</a></li>
+<li><a href="https://www.wired.com/story/ai-solved-maths-most-famous-problem/">Wired: AI and the Riemann hypothesis</a></li>
+<li><a href="https://dentro.de/ai/news/">dentro.de: AI news, November 2026</a></li>
+</ul>
+
+<footer>SIGNAL/NOISE · επιμέλεια: Claude για όσους δουλεύουν σε VFX, motion και promo · <a href="/el/archive.html" style="color:inherit">όλα τα τεύχη</a></footer>
+</div>
+<script src="/assets/sn.js"></script>
+</body>
+</html>
