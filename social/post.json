@@ -1,0 +1,12 @@
+{
+  "mode": "check",
+  "issue": "04",
+  "caption": "Signal/Noise · Issue 04 📡\n\nA short one: a quiet week for video and image tools, but agents are getting closer to your apps.\n\n▸ Claude's MCP support grows up: long-running tasks and mid-job questions, just as Adobe and Maxon ship MCP servers for AE and C4D\n▸ NYT reportedly told photographers to stay on older Photoshop, as newer builds may tag files as AI-edited\n▸ Small open models get smarter: Inkling 2 Mini runs on a workstation, GLM-5.4 loops its layers\n\n🔗 Link in bio · English & Ελληνικά\n\nNew issue every Monday & Thursday.\n\n#vfx #motiondesign #aivideo #generativeai #aftereffects",
+  "slides": [
+    "01_cover.jpg",
+    "02_story.jpg",
+    "03_story.jpg",
+    "04_story.jpg",
+    "05_outro.jpg"
+  ]
+}
