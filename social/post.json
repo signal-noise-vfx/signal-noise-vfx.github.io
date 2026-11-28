@@ -1,0 +1,12 @@
+{
+  "mode": "post",
+  "issue": "workflows-2",
+  "caption": "How do you keep AI video consistent? 🎬\n\n1️⃣ Lock it with references: one character sheet attached to every shot (Seedance, Kling Elements, Flow)\n2️⃣ Block it in 3D: a grey Blender blockout sets camera and timing, AI renders the look\n3️⃣ Act it out: film the performance yourself, transfer motion, face and lip sync to the character (Kling Motion Control, Runway Act-Two)\n\nWhich one do you use, or do you mix them? Tell us below 👇\n\n📰 AI news for VFX & promo every Monday & Thursday, link in bio\n\nImages: Dreamina, fal, Kling\n\n#vfx #motiondesign #aivideo #generativeai #aftereffects",
+  "slides": [
+    "01_cover.jpg",
+    "02_references.jpg",
+    "03_blockout.jpg",
+    "04_performance.jpg",
+    "05_cta.jpg"
+  ]
+}
